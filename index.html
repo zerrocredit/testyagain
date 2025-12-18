@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Launcher</title>
+</head>
+<body>
+  <button onclick="openBlank()">Open Game</button>
+
+  <script>
+    function openBlank() {
+      const w = window.open("about:blank");
+      w.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>about:blank</title>
+          <style>
+            html,body{margin:0;height:100%;overflow:hidden;}
+            iframe{border:none;width:100%;height:100%;}
+          </style>
+        </head>
+        <body>
+          <iframe src="https://teststtt.vercel.app/"></iframe>
+        </body>
+        </html>
+      `);
+    }
+  </script>
+</body>
+</html>
